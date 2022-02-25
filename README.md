@@ -1,0 +1,2 @@
+# Sourcemod-ErrorLogReader
+ 
