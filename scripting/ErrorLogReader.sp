@@ -4,6 +4,7 @@
 
 #include <sourcemod>
 #include <convar_class>
+#include <ErrorLogReader>
 
 #pragma newdecls required
 #pragma semicolon 1
@@ -31,24 +32,6 @@ Convar gCV_ErrorWaitTime = null;
 
 GlobalForward gH_Forward_OnNewError = null;
 GlobalForward gH_Forward_OnNewError_Post = null;
-
-/**
- * Called when new error occurred.
- *
- * @param errorMsg					Error message.
- * @noreturn.
- */
-forward void ELR_OnNewError(const char[] errorMsg);
-
-/**
- * Called when new error finish throwing.
- *
- * @param plugin					The plugin which is blaming.
- * @param errorMsg					Error message.
- * @noreturn.
- */
-forward void ELR_OnNewError_Post(const char[] plugin, ArrayList errorMsgs);
-
 
 
 
